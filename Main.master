@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Clear Skin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google" content="notranslate" />
+
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(120deg, #fff0f5, #f0fff4); /* pastel gradient */
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #ffccf2, #ccffeb);
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #660033 !important;
+            text-shadow: 1px 1px #ffe6f0;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333 !important;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #cc0066 !important;
+        }
+
+        /* Tagline */
+        .tagline {
+            background-color: #000;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+        }
+
+        /* Content area */
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #75176D;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: right;
+            padding: 12px 20px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Default.aspx">✨ Clear Skin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Default.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Admin.aspx">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Tagline -->
+        <div class="tagline">
+            🌿 One Solution for Every Skin Problem 🌿
+        </div>
+
+        <!-- Page Content -->
+        <div class="main-content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            Designed By: AMRUTA 💖
+        </footer>
+
+    </form>
+</body>
+</html>
+
