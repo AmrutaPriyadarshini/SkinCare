@@ -1,20 +1,27 @@
+-- =============================================
+-- Database: SkinCare
+-- =============================================
+
 USE [SkinCare]
 GO
 
+-- =============================================
+-- Table: SkinProblems
+-- =============================================
+
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[SkinProblems](
-	[ProblemID] [int] NOT NULL,
-	[ProblemName] [varchar](50) NULL,
-	[Homeremedy] [varchar](max) NULL,
-	[Readymade] [nvarchar](max) NULL,
- CONSTRAINT [PK_SkinProblems] PRIMARY KEY CLUSTERED 
-(
-	[ProblemID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+CREATE TABLE [dbo].[SkinProblems] (
+    [ProblemID] INT NOT NULL,
+    [ProblemName] VARCHAR(50) NULL,
+    [HomeRemedy] VARCHAR(MAX) NULL,
+    [Readymade] NVARCHAR(MAX) NULL,
+    CONSTRAINT [PK_SkinProblems] PRIMARY KEY CLUSTERED
+    (
+        [ProblemID] ASC
+    )
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
